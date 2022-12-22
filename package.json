@@ -1,0 +1,60 @@
+{
+  "name": "koco-reader",
+  "version": "1.0.0",
+  "description": "library used to synthesize html tags on web pages into sound using the Web Speech API",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier src --write",
+    "prepare": "husky install",
+    "prebuild": "rimraf dist",
+    "sass:watch": "sass --watch src/scss/styles.scss src/css/styles.css",
+    "build:sass": "sass src/scss/styles.scss dist/css/styles.css",
+    "build:node": "babel src --out-dir dist",
+    "build:browser": "SET NODE_ENV=production rollup -c",
+    "build": "npm run build:node && npm run build:browser && npm run build:sass",
+    "test:staged": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CandraJengger/koco-reader.git"
+  },
+  "keywords": [
+    "screen reader",
+    "audio",
+    "audio widget",
+    "web speech",
+    "speech"
+  ],
+  "author": "CandraJengger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CandraJengger/koco-reader/issues"
+  },
+  "homepage": "https://github.com/CandraJengger/koco-reader#readme",
+  "dependencies": {
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "eslint": "^8.30.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.7.5",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "npm run format"
+    ]
+  }
+}
