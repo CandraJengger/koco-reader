@@ -1,4 +1,6 @@
 @import './sass-utils/fonts';
 @import './sass-utils/variables';
 
-@import './base/reset';
+@import './components/koco-widget';
+@import './components/button-icon';
+@import './components/modal-option';
