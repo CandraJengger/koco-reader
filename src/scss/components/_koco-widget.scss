@@ -1,0 +1,36 @@
+.krw {
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+
+  &__container {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+    border-radius: 8px;
+    width: 170px;
+    background-color: #ffffff;
+    padding: 1.5rem 0.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__player {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__watermark {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.5rem;
+    font-weight: 600;
+    color: #232323;
+    background-color: #c4c4c4;
+    padding: 2px 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+}

@@ -1,0 +1,24 @@
+.krw-btn-icon {
+  border-radius: 9999px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: 150ms all ease-in;
+
+  &:hover {
+    opacity: 0.9;
+  }
+  &--primary {
+    background-color: #749f82;
+  }
+  &--white {
+    background-color: #ffffff;
+  }
+  &--secondary {
+    background-color: #f7fafc;
+  }
+}

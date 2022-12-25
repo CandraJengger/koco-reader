@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+.krw {
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+}
+.krw__container {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  width: 170px;
+  background-color: #ffffff;
+  padding: 1.5rem 0.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.krw__player {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.krw__watermark {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #232323;
+  background-color: #c4c4c4;
+  padding: 2px 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.krw-btn-icon {
+  border-radius: 9999px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: 150ms all ease-in;
+}
+.krw-btn-icon:hover {
+  opacity: 0.9;
+}
+.krw-btn-icon--primary {
+  background-color: #749f82;
+}
+.krw-btn-icon--white {
+  background-color: #ffffff;
+}
+.krw-btn-icon--secondary {
+  background-color: #f7fafc;
+}
+
+.krw__modal {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  width: 200px;
+  background-color: #ffffff;
+  padding: 1rem;
+  position: absolute;
+  top: -5rem;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.krw__modal--open {
+  visibility: visible;
+  opacity: 1;
+} /*# sourceMappingURL=styles.css.map */

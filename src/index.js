@@ -1,4 +1,4 @@
-import {WIDGET_POSITION} from './constants/index.js';
+import {WIDGET_POSITION} from './constants/widget.js';
 import {$} from './helpers/selector.js';
 import templates, {init} from './templates/index.js';
 
