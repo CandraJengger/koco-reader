@@ -5,9 +5,10 @@
   background-color: #ffffff;
   padding: 1rem;
   position: absolute;
-  top: -9rem;
+  top: -100%;
   right: 0;
   opacity: 0;
+  transform: translateY(-70%);
   visibility: hidden;
   transition: all 0.3s ease;
 

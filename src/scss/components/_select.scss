@@ -1,0 +1,29 @@
+.krw__select {
+  & label {
+    font-size: $text-sm;
+    font-weight: $font-medium;
+    margin-bottom: 0.2rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+
+  & > * {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+  }
+
+  select {
+    padding: 0.3rem;
+    border: 0.5px solid $secondary;
+    border-radius: 4px;
+    color: $primary;
+    
+    option {
+      color: $black;
+    }
+  }
+
+}

@@ -1,19 +1,28 @@
 import {ICONS} from '../constants/icons.js';
+import {IDS} from '../constants/ids.js';
 import {$} from '../helpers/selector.js';
 
 const elements = () => {
   const {IcMute, IcPause, IcPlay, IcVolume} = ICONS;
+  const {
+    IdModalOption,
+    IdPitchSlider,
+    IdPlayPauseButton,
+    IdRateSlider,
+    IdToggleOption,
+    IdVolumeButton
+  } = IDS;
 
   return {
     modalEl: {
-      toggle: $('#toggleOption'),
-      modal: $('#modalOption'),
+      toggle: $(`#${IdToggleOption}`),
+      modal: $(`#${IdModalOption}`),
       onToggle() {
         this.modal.classList.toggle('krw__modal--open');
       }
     },
     volumeEl: {
-      volumeBtn: $('#volumeBtn'),
+      volumeBtn: $(`#${IdVolumeButton}`),
       onMute(isMute) {
         if (isMute) {
           this.volumeBtn.innerHTML = IcMute;
@@ -23,7 +32,7 @@ const elements = () => {
       }
     },
     playEl: {
-      playPauseBtn: $('#playPauseBtn'),
+      playPauseBtn: $(`#${IdPlayPauseButton}`),
       onPlay(isPlaying) {
         if (isPlaying) {
           this.playPauseBtn.innerHTML = IcPause;
@@ -33,8 +42,8 @@ const elements = () => {
       }
     },
     sliderEl: {
-      pitchSlider: $('#pitch'),
-      rateSlider: $('#rate'),
+      pitchSlider: $(`#${IdPitchSlider}`),
+      rateSlider: $(`#${IdRateSlider}`),
       onChange(el) {
         $(`#${el.id}-value`).textContent = $(`#${el.id}`).value;
       }

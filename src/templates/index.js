@@ -1,8 +1,13 @@
 import {on} from '../helpers/selector.js';
 import elements from './elements.js';
-import KocoWidget from '../components/KocoWidget.js';
+import KocoWidget, {initVoices} from '../components/KocoWidget.js';
 
-const templates = () => KocoWidget();
+const templates = {
+  html: KocoWidget(),
+  afterInjectHTML() {
+    initVoices();
+  }
+};
 
 export function init() {
   const {modalEl, volumeEl, playEl, sliderEl} = elements();
@@ -24,8 +29,8 @@ export function init() {
     sliderEl.onChange(sliderEl.pitchSlider);
   });
 
-  on(sliderEl.speedSlider, 'change', function () {
-    sliderEl.onChange(sliderEl.speedSlider);
+  on(sliderEl.rateSlider, 'change', function () {
+    sliderEl.onChange(sliderEl.rateSlider);
   });
 }
 

@@ -9,7 +9,8 @@ export const createWidget = ({
   //   direction: 'right-bottom'
   // }
 }) => {
-  const templateHTML = templates();
+  const templateHTML = templates.html;
+  templates.afterInjectHTML();
 
   if (position === WIDGET_POSITION.Inline && selector) {
     const tempWrapper = $(selector);

@@ -66,9 +66,10 @@
   background-color: #ffffff;
   padding: 1rem;
   position: absolute;
-  top: -9rem;
+  top: -100%;
   right: 0;
   opacity: 0;
+  transform: translateY(-70%);
   visibility: hidden;
   transition: all 0.3s ease;
 }
@@ -110,4 +111,27 @@
   height: 16px;
   border-radius: 999px;
   cursor: pointer;
+}
+
+.krw__select label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+.krw__select__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+.krw__select > * {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+.krw__select select {
+  padding: 0.3rem;
+  border: 0.5px solid #f7fafc;
+  border-radius: 4px;
+  color: #749f82;
+}
+.krw__select select option {
+  color: #232323;
 }/*# sourceMappingURL=styles.css.map */
