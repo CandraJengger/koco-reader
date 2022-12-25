@@ -45,10 +45,18 @@ function KocoWidget() {
             idComp: 'modalOption',
             children: `
             ${Slider({
-              idComp: 'pitch'
+              idComp: 'pitch',
+              min: 0,
+              max: 2,
+              value: 1,
+              step: 0.1
             })}
             ${Slider({
-              idComp: 'speed'
+              idComp: 'rate',
+              min: 0.5,
+              max: 2,
+              value: 1,
+              step: 0.1
             })}
             `
           })}

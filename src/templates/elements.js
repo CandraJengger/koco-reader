@@ -34,7 +34,7 @@ const elements = () => {
     },
     sliderEl: {
       pitchSlider: $('#pitch'),
-      speedSlider: $('#speed'),
+      rateSlider: $('#rate'),
       onChange(el) {
         $(`#${el.id}-value`).textContent = $(`#${el.id}`).value;
       }
