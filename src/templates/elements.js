@@ -8,13 +8,13 @@ const elements = () => {
     modalEl: {
       toggle: $('#toggleOption'),
       modal: $('#modalOption'),
-      onToggle: function onToggle() {
+      onToggle() {
         this.modal.classList.toggle('krw__modal--open');
       }
     },
     volumeEl: {
       volumeBtn: $('#volumeBtn'),
-      onMute: function onMute(isMute) {
+      onMute(isMute) {
         if (isMute) {
           this.volumeBtn.innerHTML = IcMute;
           return;
@@ -24,12 +24,19 @@ const elements = () => {
     },
     playEl: {
       playPauseBtn: $('#playPauseBtn'),
-      onPlay: function onPlay(isPlaying) {
+      onPlay(isPlaying) {
         if (isPlaying) {
           this.playPauseBtn.innerHTML = IcPause;
           return;
         }
         this.playPauseBtn.innerHTML = IcPlay;
+      }
+    },
+    sliderEl: {
+      pitchSlider: $('#pitch'),
+      speedSlider: $('#speed'),
+      onChange(el) {
+        $(`#${el.id}-value`).textContent = $(`#${el.id}`).value;
       }
     }
   };

@@ -1,6 +1,7 @@
 import {ICONS} from '../constants/icons.js';
 import ButtonIcon from './ButtonIcon.js';
 import ModalOption from './ModalOption.js';
+import Slider from './Slider.js';
 
 function KocoWidget() {
   const {IcVolume, IcPlay} = ICONS;
@@ -41,7 +42,15 @@ function KocoWidget() {
           </div>
           <span class="krw__watermark">koco-reader</span>
           ${ModalOption({
-            idComp: 'modalOption'
+            idComp: 'modalOption',
+            children: `
+            ${Slider({
+              idComp: 'pitch'
+            })}
+            ${Slider({
+              idComp: 'speed'
+            })}
+            `
           })}
         </div>
       `;
